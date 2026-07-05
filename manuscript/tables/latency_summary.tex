@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\caption{Strict latency benchmark under single-worker, fixed-core execution. Timing covers planner replanning, candidate expansion, risk and wind-energy budget queries from the precomputed edge cache; edge-cache construction and simulator execution are excluded.}
+\label{tab:latency}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ll}
+\hline
+Metric & Value \\
+\hline
+Hardware & Intel Core i9-9980XE CPU @ 3.00 GHz; Ubuntu Linux 6.8 \\
+Language/runtime & Python 3.10.19 \\
+Execution mode & single worker; fixed core; warm-up before measurement \\
+Collision/wind-field timing scope & includes cached clearance-risk and wind-energy budget lookups; excludes edge-cache construction \\
+Episodes & 360 \\
+Replan samples & 9962 \\
+p50 & 0.3314 s \\
+p95 & 1.7549 s \\
+p99 & 1.7590 s \\
+Max & 1.7917 s \\
+Deadline miss rate & 0.0000 \\
+Hard failures in simulation checks & 0 \\
+\hline
+\end{tabular}
+}
+\end{table}

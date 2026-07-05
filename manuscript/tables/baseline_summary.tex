@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\caption{Main comparison on blind and gust-stress scenarios. SWC values are mean, standard deviation and standard error over paired episodes.}
+\label{tab:baseline-summary}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccccccc}
+\hline
+Scenario & Planner & Episodes & SWC mean & SWC SD & SWC SE & Success & Battery viol. & Reserve shortfall & Return success \\
+\hline
+Blind & RAWA-RHP & 600 & 0.8435 & 0.1059 & 0.0043 & 1.0000 & 0.0000 & 0.0000 & 1.0000 \\
+Blind & FairALNSPlanner & 600 & 0.6987 & 0.2307 & 0.0094 & 1.0000 & 0.0000 & 0.0000 & 1.0000 \\
+Blind & FairRiskAwareGreedy & 600 & 0.5135 & 0.1283 & 0.0052 & 1.0000 & 0.0000 & 0.0000 & 1.0000 \\
+Blind & ReserveOnlyPlanner & 600 & 0.4985 & 0.1890 & 0.0077 & 1.0000 & 0.0000 & 0.0000 & 1.0000 \\
+Gust $\times 3$ & RAWA-RHP & 400 & 0.8006 & 0.1013 & 0.0051 & 1.0000 & 0.0000 & 0.0000 & 1.0000 \\
+Gust $\times 3$ & FairALNSPlanner & 400 & 0.5986 & 0.2177 & 0.0109 & 1.0000 & 0.0000 & 0.0000 & 1.0000 \\
+Gust $\times 3$ & FairRiskAwareGreedy & 400 & 0.4647 & 0.1250 & 0.0062 & 1.0000 & 0.0000 & 0.0000 & 1.0000 \\
+Gust $\times 3$ & ReserveOnlyPlanner & 400 & 0.3940 & 0.1430 & 0.0072 & 0.9950 & 0.0050 & 0.1500 & 0.9950 \\
+\hline
+\end{tabular}
+}
+\end{table}

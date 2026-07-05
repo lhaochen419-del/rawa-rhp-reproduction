@@ -1,0 +1,23 @@
+group,level,variant,config_overrides,planner_overrides,risk_scale,is_final_setting
+final,final,final,{},{},,True
+energy_quantile,q80,energy_quantile=q80,{},"{""tail_quantile"": ""q80""}",,False
+energy_quantile,q95,energy_quantile=q95,{},"{""tail_quantile"": ""q95""}",,False
+reserve_floor,60.0,reserve_floor=60,"{""reserve_floor"": 60.0}",{},,False
+reserve_floor,100.0,reserve_floor=100,"{""reserve_floor"": 100.0}",{},,False
+reserve_buffer,8.0,reserve_buffer=8,{},"{""reserve_buffer"": 8.0}",,False
+reserve_buffer,24.0,reserve_buffer=24,{},"{""reserve_buffer"": 24.0}",,False
+clearance_threshold,0.03,clearance_threshold=0.03,"{""clearance_event_threshold"": 0.03}",{},,False
+clearance_threshold,0.08,clearance_threshold=0.08,"{""clearance_event_threshold"": 0.08}",{},,False
+risk_dispersion_scale,0.75,risk_dispersion_scale=0.75,{},{},0.75,False
+risk_dispersion_scale,1.25,risk_dispersion_scale=1.25,{},{},1.25,False
+beam_search_budget,0.5,beam_search_budget=0.5x,{},"{""beam_width"": 48, ""candidate_pool_size"": 8, ""max_replan_expansions"": 4500, ""packing_candidate_limit"": 9, ""repair_max_insertions"": 5, ""repair_top_k"": 3}",,False
+beam_search_budget,1.5,beam_search_budget=1.5x,{},"{""beam_width"": 144, ""candidate_pool_size"": 24, ""max_replan_expansions"": 13500, ""packing_candidate_limit"": 27, ""repair_max_insertions"": 15, ""repair_top_k"": 9}",,False
+horizon_length,8,horizon_length=8,{},"{""beam_depth"": 8}",,False
+horizon_length,10,horizon_length=10,{},"{""beam_depth"": 10}",,False
+horizon_length,12,horizon_length=12,{},"{""beam_depth"": 12}",,False
+rr_cmp_weights,0.75,rr_cmp_weights=0.75x,{},"{""insertion_risk_weight"": 13.5, ""packing_regret_weight"": 0.28500000000000003, ""packing_unlock_weight"": 0.18}",,False
+rr_cmp_weights,1.25,rr_cmp_weights=1.25x,{},"{""insertion_risk_weight"": 22.5, ""packing_regret_weight"": 0.475, ""packing_unlock_weight"": 0.3}",,False
+gust_samples,16,gust_samples=16,"{""gust_samples"": 16}",{},,False
+gust_samples,64,gust_samples=64,"{""gust_samples"": 64}",{},,False
+replan_cap,1.0,replan_cap=1s,{},"{""max_replan_seconds"": 1.0}",,False
+replan_cap,2.5,replan_cap=2.5s,{},"{""max_replan_seconds"": 2.5}",,False

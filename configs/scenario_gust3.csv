@@ -1,0 +1,2 @@
+suite,profiles,wind_levels,obstacle_densities,gust_multiplier,episodes,notes
+gust_stress,id,moderate,severe,sparse,cluttered,3.0,400 paired episodes,paired scenarios use fixed map wind target battery threshold and seed within each comparison

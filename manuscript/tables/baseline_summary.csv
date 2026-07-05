@@ -1,0 +1,9 @@
+scenario,planner,safe_weighted_coverage,mission_success,battery_violation,reserve_shortfall,return_success
+Blind,RAWA-RHP,0.8434907560206093,1.0,0.0,0.0,1.0
+Blind,FairALNSPlanner,0.6987477558553926,1.0,0.0,0.0,1.0
+Blind,FairRiskAwareGreedy,0.5135087463226036,1.0,0.0,0.0,1.0
+Blind,ReserveOnlyPlanner,0.498510002622239,1.0,0.0,0.0,1.0
+Gust x3,RAWA-RHP,0.8005681885306407,1.0,0.0,0.0,1.0
+Gust x3,FairALNSPlanner,0.598629327555853,1.0,0.0,0.0,1.0
+Gust x3,FairRiskAwareGreedy,0.4646708648599462,1.0,0.0,0.0,1.0
+Gust x3,ReserveOnlyPlanner,0.3940085718485069,0.995,0.005,0.15,0.995

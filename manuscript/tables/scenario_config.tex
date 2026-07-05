@@ -1,0 +1,44 @@
+\begin{table}[!htbp]
+\centering
+\caption{Scenario configuration used by the reported experiments.}
+\label{tab:scenario-config}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llll}
+\hline
+Item & Blind suite & Gust-stress suite & Formal ablation suite \\
+\hline
+Episodes & 600 paired episodes & 400 paired episodes & 5760 episodes over 360 shared scenarios \\
+Seeds and profiles & Shared seeds; in-distribution profile & Shared seeds; in-distribution profile & seeds 1--20; ID, correlated gust, narrow passage \\
+Wind levels & calm, moderate, severe & moderate, severe & calm, moderate, severe \\
+Gust multiplier & 1.0 & 3.0 applied to sampled-energy deviation from mean & 1.0 \\
+Obstacle density & sparse and cluttered & sparse and cluttered & sparse and cluttered \\
+World and grid & 100 by 100 world; 50 by 50 grid & same & same \\
+Depot & fixed at $(8,8)$ for reported profiles & fixed at $(8,8)$ & fixed at $(8,8)$ \\
+Targets & 32 targets; values $\{1,1.5,2,2.5,3\}$ with probabilities $\{0.16,0.20,0.28,0.20,0.16\}$ & same & same \\
+Obstacle generation & 7 sparse or 13 cluttered rectangles; targets sampled near obstacles with probability 0.78 & same & same, with additional narrow-passage bars for that OOD profile \\
+Wind bands & calm 0.6--1.8, moderate 3.0--5.0, severe 6.0--8.0; gust bases 0.35/0.75/1.20 & same bands; execution multiplier 3.0 & same bands; correlated-gust profile shares gust components \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Vehicle, energy and hard-failure check parameters used by the simulator.}
+\label{tab:vehicle-check-config}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lll}
+\hline
+Parameter group & Value & Role in the evaluated simulation benchmark \\
+\hline
+Battery and speed & battery 1200; ground speed 5.0; max air speed 12.0 & Vehicle energy envelope and velocity limits. \\
+Inspection cost & photo energy 5.0; photo time 2.0 & Per-target observation cost. \\
+Energy coefficients & $c_0=1.0$, $c_1=0.045$, $c_2=0.070$, $c_{\mathrm{turn}}=2.0$ & Wind-dependent travel and turning energy. \\
+Reserve check & fixed reserve floor 80 & Benchmark-level reserve-shortfall threshold. \\
+Clearance check & UAV radius 0.35; clearance buffer 0.80; event threshold 0.05 & Clearance hard-failure check thresholds. \\
+Risk dispersion & $\sigma_0=0.25$, $k_{\mathrm{cross}}=0.08$, $k_{\mathrm{gust}}=0.05$ & Segment-level clearance-event model. \\
+Episode termination & all targets visited, no feasible next target, return completion, battery violation, or emergency abort & Simulator stopping conditions. \\
+\hline
+\end{tabular}
+}
+\end{table}

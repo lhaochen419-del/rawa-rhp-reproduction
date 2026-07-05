@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering
+\caption{Formal full-mode ablation results. Mean difference is RAWA-RHP minus the ablated planner in safe weighted coverage. Each row uses 360 paired scenarios; confidence intervals use seed-clustered bootstrap resampling.}
+\label{tab:ablation}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccc}
+\hline
+Module & Protocol & Episodes & Mean diff. & 95\% CI & Holm $p$ & Budget check \\
+\hline
+NoPacking & Native & 720 & 0.1640 & [0.1588, 0.1690] & 0.00075 & n/a \\
+NoPacking & EqTime & 720 & 0.1640 & [0.1589, 0.1690] & 0.00075 & pass \\
+NoPacking & EqEval & 720 & 0.1446 & [0.1391, 0.1499] & 0.00075 & pass \\
+NoAdaptiveSearch & Native & 720 & 0.0462 & [0.0416, 0.0510] & 0.00075 & n/a \\
+NoAdaptiveSearch & EqTime & 720 & 0.0462 & [0.0415, 0.0510] & 0.00075 & pass \\
+NoAdaptiveSearch & EqEval & 720 & 0.0282 & [0.0243, 0.0317] & 0.00075 & pass \\
+BlindReserve & Native & 720 & 0.0411 & [0.0390, 0.0431] & 0.00075 & n/a \\
+BlindReserve & EqTime & 720 & 0.0411 & [0.0390, 0.0431] & 0.00075 & pass \\
+BlindReserve & EqEval & 720 & 0.0418 & [0.0392, 0.0443] & 0.00075 & pass \\
+NoRisk & Native & 720 & 0.0335 & [0.0311, 0.0357] & 0.00075 & n/a \\
+NoRisk & EqTime & 720 & 0.0336 & [0.0313, 0.0357] & 0.00075 & pass \\
+NoRisk & EqEval & 720 & 0.0331 & [0.0307, 0.0354] & 0.00075 & pass \\
+NoBeam & Native & 720 & 0.0181 & [0.0142, 0.0222] & 0.00075 & n/a \\
+NoBeam & EqTime & 720 & 0.0181 & [0.0142, 0.0222] & 0.00075 & pass \\
+NoBeam & EqEval & 720 & 0.0171 & [0.0135, 0.0208] & 0.00075 & pass \\
+\hline
+\end{tabular}
+}
+\end{table}

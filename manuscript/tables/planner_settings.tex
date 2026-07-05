@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\caption{Planner settings and information access in the implemented comparison. FairALNSPlanner is the strongest implemented baseline under this configuration, not an exhaustive upper bound over all possible baselines. RAWA-RHP uses a q90 adaptive tail budget; tail90 and tail95 denote baseline-specific conservative tail-budget rules.}
+\label{tab:planner-settings}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
+\hline
+Planner & Wind estimate & Return check & Reserve check & Clearance check & Packing & Receding horizon & Time budget & Eval. budget \\
+\hline
+ReserveOnlyPlanner & Yes, tail90 baseline budget & Yes & Yes, fixed reserve & No explicit risk check & No & One-step & No & No \\
+FairRiskAwareGreedy & Yes, adaptive tail95 baseline budget & Yes & Yes, fixed buffer & Edge and average risk caps & No & One-step & No & No \\
+FairALNSPlanner & Yes, RAWA energy budget & Yes & Yes, adaptive reserve & Risk-aware feasibility score & No & Yes & 1.75 s & 9000 base expansions \\
+RAWA-RHP & Yes, q90 adaptive budget & Yes & Yes, adaptive reserve & Risk-aware ranking/reserve/pricing & Yes, RR-CMP & Yes & 1.75 s & Adaptive 30k--86k expansions \\
+\hline
+\end{tabular}
+}
+\end{table}

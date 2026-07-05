@@ -1,0 +1,15 @@
+\begin{table}[!htbp]
+\centering
+\caption{Paired statistical comparison against the strongest implemented baseline. The statistical unit is the scenario seed; confidence intervals use 10000 seed-clustered bootstrap resamples and Holm correction is applied within each reported comparison family.}
+\label{tab:baseline-stats}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccc}
+\hline
+Scenario & Strongest implemented baseline & Pairs & Mean diff. & 95\% CI & Holm $p$ & Simulation checks not worse \\
+\hline
+Blind & FairALNSPlanner & 600 & 0.1447 & [0.1307, 0.1591] & 0.00015 & Yes \\
+Gust $\times 3$ & FairALNSPlanner & 400 & 0.2019 & [0.1819, 0.2231] & 0.00015 & Yes \\
+\hline
+\end{tabular}
+}
+\end{table}

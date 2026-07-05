@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering
+\caption{Hard failure definitions used by the evaluated simulation hard-failure checks.}
+\label{tab:failure-definitions}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lp{0.72\textwidth}}
+\hline
+Failure type & Definition in the simulator \\
+\hline
+Battery violation & Remaining battery becomes negative during an inspection leg or the final return leg. \\
+Clearance violation & Expected clearance-event rate exceeds 0.05, or the minimum path clearance is below UAV radius plus clearance buffer ($0.35 + 0.80$). \\
+Reserve shortfall & Final battery minus the reserve floor is negative; the reserve floor is 80 energy units. \\
+Return failure & The vehicle cannot complete the planned return with non-negative battery. \\
+Emergency abort & A battery violation occurs during execution, triggering an immediate abort flag. \\
+\hline
+\end{tabular}
+}
+\end{table}

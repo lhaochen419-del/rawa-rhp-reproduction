@@ -1,0 +1,27 @@
+\begin{table}[!htbp]
+\centering
+\caption{RAWA-RHP implementation parameters used in the reported experiments. Adaptive ranges are produced by the risk- and opportunity-dependent search-budget rule.}
+\label{tab:method-parameters}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llll}
+\hline
+Parameter group & Value & Role & Selection note \\
+\hline
+Beam width & Initial 96; adaptive 240--560 & Number of route prefixes retained after pruning. & Fixed search configuration. \\
+Horizon length & Initial 7; adaptive 10--12 & Maximum prefix depth expanded within one replanning step. & Fixed receding-horizon range. \\
+Candidate pool size & Initial 16; adaptive 34--72 & Maximum target candidates retained for expansion. & Fixed candidate-generation range. \\
+Repair candidates & top-$k$ 18--56; insertions 22--48 & Number of prefixes and insertions considered during repair. & Fixed repair range. \\
+RR-CMP candidates & Initial 18; adaptive 18--48 & Maximum marginal-packing candidates per repair pass. & Fixed marginal-packing range. \\
+Energy quantile & q90 & Tail statistic for travel and return energy budgeting. & Tail-budget setting used consistently. \\
+Gust samples & 32 plus nominal estimate & Edge-level samples used for tail-budget estimation. & Fixed sampling count for the edge cache. \\
+Energy model & $c_0=1.0$, $c_1=0.045$, $c_2=0.070$, $c_{\mathrm{turn}}=2.0$ & Per-metre and turning-energy coefficients. & Simulator configuration. \\
+Reserve parameters & floor 80; buffer 16; pressure weights 22/18/12 & Minimum reserve plus battery, return and risk-pressure terms. & Benchmark floor plus fixed adaptive range. \\
+Risk parameters & $\sigma_0=0.25$, $k_{\mathrm{cross}}=0.08$, $k_{\mathrm{gust}}=0.05$, $p_{\max}=0.08$ & Clearance-risk dispersion and reference cap. & Fixed clearance-risk model configuration. \\
+Simulation check thresholds & clearance buffer 0.80; event threshold 0.05 & Thresholds used by benchmark hard-failure checks. & Benchmark thresholds. \\
+Risk/pricing weights & insertion 18; packing regret 0.38; packing unlock 0.24 & Penalties and bonuses used in insertion and RR-CMP scoring. & Fixed route-packing configuration. \\
+Search budget & 1.75 s; adaptive 30k--86k expansions & Runtime and expansion termination limits per replan. & Fixed runtime and expansion cap. \\
+Termination & no feasible target, all targets visited, expansion/time budget, or battery abort & Conditions that end a replan or episode. & Fixed stopping conditions. \\
+\hline
+\end{tabular}
+}
+\end{table}

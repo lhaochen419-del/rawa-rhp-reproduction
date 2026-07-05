@@ -1,0 +1,7 @@
+scenario_family,profile,wind,obstacle_density,intended_role
+ID calm/open,id,calm,sparse,low-risk reference condition
+ID routine,id,moderate,sparse/cluttered,nominal inspection condition
+Stress,id,severe,cluttered,high reserve and clearance pressure
+OOD correlated gust,ood:correlated_gust,all levels,sparse/cluttered,wind-uncertainty shift
+OOD narrow passage,ood:narrow_passage,all levels,sparse/cluttered,geometric clearance shift
+Gust x3,id,moderate/severe,sparse/cluttered,execution-time gust stress

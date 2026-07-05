@@ -1,0 +1,23 @@
+{
+  "episodes": 360,
+  "runtime_seconds": 8519.977231834026,
+  "deadline": 1.8,
+  "p95_limit": 1.8,
+  "p99_limit": 2.2,
+  "latency": {
+    "p50": 0.331365476,
+    "p95": 1.7548596778999999,
+    "p99": 1.75901256703,
+    "max": 1.79165224,
+    "deadline_miss_rate": 0.0,
+    "n_replans": 9962
+  },
+  "hard_safety_rates": {
+    "battery_violation": 0.0,
+    "clearance_violation": 0.0,
+    "reserve_shortfall": 0.0,
+    "return_failure": 0.0,
+    "emergency_abort": 0.0
+  },
+  "passes": true
+}
