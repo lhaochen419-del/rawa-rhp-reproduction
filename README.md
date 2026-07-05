@@ -24,3 +24,8 @@ python scripts/make_tables_figures.py --package-root .
 ## Evidence boundary
 
 Formal manuscript evidence is limited to the files listed in `MANIFEST.json` under `formal_evidence_whitelist`. Smoke, development, budget-debug, old CVaR, NoRisk-Pure and tuning-run data are not manuscript evidence.
+
+## License
+
+  Code is released under the MIT License. Data, result files, figures, tables,
+  and documentation are released under CC BY 4.0 unless otherwise noted.
