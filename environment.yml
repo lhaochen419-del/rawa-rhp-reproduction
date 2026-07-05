@@ -1,0 +1,11 @@
+name: rawa-rhp-reproduction
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - tqdm
+  - pytest

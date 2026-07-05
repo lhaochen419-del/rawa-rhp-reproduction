@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "RAWA-RHP reproduction package"
+message: "If you use this package, cite the associated manuscript."
+type: software
+authors:
+  - family-names: Li
+    given-names: Haochen
+  - family-names: Wei
+    given-names: Junhao
+  - family-names: Wang
+    given-names: Yapeng
+date-released: 2026-07-04
+repository-code: "private reviewer link to be provided"
